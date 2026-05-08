@@ -169,6 +169,6 @@ AIで省けるのは**迷いと反復作業**。省いて空いた時間を**人
 - ログ: `runs/YYYY-MM-DD/{run_id}.jsonl`
 - 意思決定ログ: `memory/decisions/YYYY-MM-DD-{topic}.md`
 
-## Current Focus (2026-05-08)
-**10時間スプリント中**: SNS-Ops Agentのプロト→実走→営業導線まで一気に進める。
-タイムラインは `memory/decisions/2026-05-08-10h-sprint.md` 参照。
+## Current Focus (2026-05-09)
+**SNS-Ops Agent 実走開始**: 5層ロジックでThreads投稿1本目完了。40代再挑戦テーマで本音ベースの訴求を確認。
+**次**: Instagram、X展開 + 営業導線の具体化。
