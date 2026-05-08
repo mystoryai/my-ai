@@ -13,6 +13,7 @@
 - **次に来る可能性**: 事務効率化、業務自動化、リサーチ・要約、顧客サポート、社内ナレッジ整備など、AIで価値が出る別領域に転用していく。
 - **書き換えのトリガー**: ダイスケさんが「次に行く」と言った瞬間、Claudeはこのファイルの **Current Practice Ground / Current Focus / Working Principles** を即座に書き換え、新フェーズの北極星を再定義する。許可は要らない、即やる。
 - **絶対に変えないもの**: 下の **Partnership Compact** と **Core Thesis**。フェーズが変わっても、俺たちの向き合い方とロジック思想は残す。
+- **Voice Direction**: SNS-Opsフェーズ中だけ適用される専用ルール。次の練習台に移ったら書き換える。
 
 → このファイルは「契約書」と思え。中身(=やってる事業)は変わる。**俺たちの向き合い方は変えない**。
 
@@ -112,7 +113,14 @@ AIで省けるのは**迷いと反復作業**。省いて空いた時間を**人
 
 | Codename | What | Phase |
 |----------|------|-------|
-| **SNS-Ops Agent** | **40代ターゲット**のSNS運用を自動化するAIエージェント。Instagram/Threads/X/LINE等、40代がリアルに動いてる場を横断 | MVP構築中 |
+| **SNS-Ops Agent** | **40代ターゲット**のSNS運用を自動化するAIエージェント。Threads中心の40代SNS運用自動化 | MVP構築中 |
+
+### 運用の現状
+- **プラットフォーム**: Threads単独
+- **配信タイミング**: 12時/19時
+- **出力形式**: 単発投稿
+- **設定ファイル**: `configs/sns-ops-agent.yaml`
+- **プロンプト**: `prompts/{layer}/`
 
 → 詳細: `memory/projects/sns-ops-agent.md`
 → プラットフォーム別の40代実態: `memory/context/platforms.md`
@@ -135,7 +143,7 @@ AIで省けるのは**迷いと反復作業**。省いて空いた時間を**人
 | オーケストレーション | Python(MVP) | Dify, Make, n8n |
 | プロンプト管理 | YAML/MD(`prompts/`) | Dify Variables |
 | 実行ログ | JSONL(`runs/`) | Langfuse, Phoenix |
-| SNS連携 | (未) Instagram Graph API, Threads API, X API, LINE Messaging API | 同左 |
+| SNS連携 | (未) Threads API, LINE Messaging API | 同左 |
 
 ## Agent Logic (5-Layer Spec)
 1. **Intake** — 入力を構造化(テーマ、対象アカウント、KPI、制約)
@@ -145,6 +153,30 @@ AIで省けるのは**迷いと反復作業**。省いて空いた時間を**人
 5. **Publish/Learn** — 配信(MVPは出力のみ) + 結果を`runs/`に記録し、次回のIntakeに反映
 
 → 詳細: `memory/projects/sns-ops-agent.md` の「Logic Layers」
+
+## Voice Direction (今の練習台専用ルール)
+
+### 核心ルール
+**ダイスケさんの強みは『教えない』こと**
+- 説教・指導・アドバイスは絶対に書かない
+- 体験談と本音だけで構成する
+- 読み手に「気づき」を与えるのではなく「共感」を与える
+
+### 物理仕様
+- **文字数**: 20〜50字
+- **1行目**: 必ず「40代」を含む
+- **改行**: 1行目と2行目の間に必ず改行を入れる
+
+### 勝ちパターン4型
+1. **リアル体験 + 気づき**: 具体的な失敗/成功体験 → そこから得た生々しい気づき
+2. **意外な視点**: 一般論を覆す、40代だからこその逆張り視点
+3. **本音の吐露**: 建前を捨てた、泥臭い本当の気持ち
+4. **微細な観察**: 他の人が見落とす、細かいけど的確な気づき
+
+### 滑りパターン（絶対回避）
+- **weak_uncertainty**: 「〜かもしれない」「〜だと思う」など弱い表現
+- **explicit_transformation**: 「変わった」「成長した」など変化を明言する
+- **preachy_aphorism**: 格言っぽい説教調の結論
 
 ## Terms
 | Term | Meaning |
@@ -170,5 +202,15 @@ AIで省けるのは**迷いと反復作業**。省いて空いた時間を**人
 - 意思決定ログ: `memory/decisions/YYYY-MM-DD-{topic}.md`
 
 ## Current Focus (2026-05-09)
-**SNS-Ops Agent 実走開始**: 5層ロジックでThreads投稿1本目完了。40代再挑戦テーマで本音ベースの訴求を確認。
-**次**: Instagram、X展開 + 営業導線の具体化。
+
+### 進捗トラッカー
+- ✅ SNS-Ops Agent 5層ロジック初版完成
+- ✅ Threads投稿1本目完了（40代再挑戦テーマ）
+- ✅ Voice Direction ルール策定
+- 🟡 5層プロンプト初版執筆中
+- 🟡 `settings.local.proposed.json` 検討中
+- ⬜ 営業導線の具体化
+- ⬜ MRR積み上げ仕組み化
+
+### 今日のフォーカス
+Threads運用精度向上 + 5層プロンプトの完成
