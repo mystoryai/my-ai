@@ -1,3 +1,9 @@
+---
+name: threads
+description: 40代ターゲット向けのThreads投稿を生成するスキル
+activation: "/threads"
+---
+
 # Threads投稿生成スキル
 
 ## 概要
