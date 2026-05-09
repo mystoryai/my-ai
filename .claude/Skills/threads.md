@@ -150,5 +150,36 @@ activation: "/threads"
 - [ ] 固有の視点あり
 - [ ] 共感を誘う内容
 
+## プロジェクト情報
+
+### SNS-Ops Agent 概要
+| Codename | What | Phase |
+|----------|------|-------|
+| **SNS-Ops Agent** | **40代ターゲット**のSNS運用を自動化するAIエージェント。Threads中心の40代SNS運用自動化 | MVP構築中 |
+
+### 運用の現状
+- **プラットフォーム**: Threads単独
+- **配信タイミング**: 12時/19時
+- **出力形式**: 単発投稿
+- **設定ファイル**: `configs/sns-ops-agent.yaml`
+- **プロンプト**: `prompts/{layer}/`
+
+### Tech Stack（SNS連携）
+| Layer | Tool | 移植先候補 |
+|-------|------|-----------|
+| SNS連携 | (未) Threads API, LINE Messaging API | 同左 |
+
+### 進捗トラッカー（Threads関連）
+- ✅ SNS-Ops Agent 5層ロジック初版完成
+- ✅ Threads投稿1本目完了（40代再挑戦テーマ）
+- ✅ Voice Direction ルール策定
+- 🟡 5層プロンプト初版執筆中
+- 🟡 Threads運用精度向上
+
+### 参照ファイル
+- プラットフォーム別の40代実態: `memory/context/platforms.md`
+- 40代ICP定義: `memory/context/icp-40s.md`
+- プロジェクト詳細: `memory/projects/sns-ops-agent.md`
+
 ---
 *このスキルはダイスケさんのAI事業立ち上げにおける「最初の練習台」として位置づけられています。ここで身につけたロジック・売り方・運用フローを、次の領域に転用していきます。*
