@@ -4,7 +4,7 @@
 
 ### /threads
 40代ターゲット向けのThreads投稿を生成します。
-スキルファイル: `.claude/Skills/threads.md`
+スキルファイル: `Skills/threads.md`
 
 このコマンドを実行すると、以下の手順で処理されます：
 1. `.claude/Skills/threads.md` の内容を読み込み

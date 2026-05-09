@@ -113,7 +113,7 @@ AIで省けるのは**迷いと反復作業**。省いて空いた時間を**人
 
 SNS運用エージェントで初の有料案件成約を目指しています。
 
-→ 詳細: `.claude/Skills/threads.md`
+→ 詳細: `Skills/threads.md`
 
 ## Working Principles (Core Thesisから派生)
 - **ロジック >>> 感覚**: 挙動はYAML/MDで宣言的に固定。プロンプトは外出し、変更履歴を残す。属人化させない。
